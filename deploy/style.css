@@ -9,7 +9,7 @@
     --color-text-light: #8d8d8d;
     --color-text-dark: #3b3735;
     --color-bg1: #faf4f2;
-    --color-bg2: #f8e1db;
+    --color-bg2: #ffe5df;
     --color-white: #fff;
 
     --font-size-header: 18px;
@@ -27,7 +27,7 @@
 
 body {
     background-color: var(--color-bg1);
-    color: var(--color-text)
+    color: var(--color-text);
 }
 
 .clearfix::after {
@@ -45,7 +45,6 @@ body {
     font-size: 18px;
     line-height: 28px;
 }
-
 
 /* HEADER
 ================================================================*/
@@ -73,6 +72,11 @@ body {
     text-decoration: none;
     color: var(--color-text-dark);
     font-size: var(--font-size-header);
+    transition: all 0.3s;
+}
+
+.header__nav-item a:hover {
+    color: var(--color-primary);
 }
 
 .header .active a {
@@ -113,7 +117,7 @@ body {
 .activities__card {
     padding: 40px;
     background-color: var(--color-white);
-    border-radius: 50px;
+    border-radius: 34px;
 }
 
 .activities__img {
@@ -126,7 +130,7 @@ body {
 }
 
 .activities__love {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     position: absolute;
     top: 20px;
@@ -155,11 +159,11 @@ body {
     border-radius: 25px;
     color: var(--color-text-light);
     background-color: rgba(141, 141, 141, 0.2);
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     border: transparent;
     cursor: pointer;
-    transition: all .2s;
+    transition: all 0.3s;
 }
 
 .activities > button {
@@ -171,7 +175,8 @@ body {
     cursor: pointer;
     outline: none;
     margin-top: 40px;
-    transition: all .2s;
+    transition: all 0.3s;
+    font-size: 16px;
 }
 
 .activities > button:hover,
@@ -191,7 +196,6 @@ body {
 
 .contact {
     color: var(--color-text-light);
-    
 }
 
 .contact__left,
@@ -218,7 +222,7 @@ body {
     margin: 12px 0 30px;
 }
 
-.contact__social h3{
+.contact__social h3 {
     margin-bottom: 20px;
 }
 
@@ -243,10 +247,13 @@ body {
     padding: 70px 0 30px;
 }
 
+.footer__content {
+    margin-bottom: 40px;
+}
+
 .footer__text,
 .footer__nav {
     float: left;
-    margin-bottom: 40px;
 }
 
 .footer__nav {
@@ -265,11 +272,11 @@ body {
     padding-right: var(--footer-gap);
 }
 
-.footer__text h3 {
-    margin-bottom: 10px;
+.footer__content h3 {
+    margin-bottom: 30px;
 }
 
-.footer__nav ul{
+.footer__nav ul {
     float: left;
     width: 33.333333%;
     list-style: none;
@@ -279,12 +286,16 @@ body {
     margin-bottom: 10px;
 }
 
-.footer__nav li a {
+.footer__nav a {
     text-decoration: none;
     color: var(--color-text-dark);
+    transition: all 0.3s;
+}
+
+.footer__nav a:hover {
+    color: var(--color-primary);
 }
 
 .footer__copyright {
     text-align: center;
-    margin-top: 20px;
 }
